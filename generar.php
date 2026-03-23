@@ -22,7 +22,6 @@ $itemsRate = $_POST['item_rate'] ?? [];
 $items = [];
 for ($i = 0; $i < count($itemsName); $i++) {
     if (!empty($itemsName[$i])) {
-        // Aseguramos que si escribes "41,041" (coma en lugar de punto) se envíe bien a la API
         $qtyFormat = str_replace(',', '.', $itemsQty[$i]);
         
         $items[] = [
